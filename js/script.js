@@ -47,7 +47,7 @@ window.onload = function(){
 
     
 
-    alert("Hola mundo");
+    /* alert("Hola mundo"); */
 
 
 }
