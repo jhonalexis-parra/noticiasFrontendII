@@ -41,6 +41,16 @@ const noticias = [
     },
 ];
 
+function crearNoticia() {
+    const templateNotica= `
+    <div class='noticia'>
+        <p class='fecha'>DD/MM/AA</p>
+        <img src=''>
+        <h3>Titulo</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quas, veritatis fuga asperiores nisi voluptas ipsa nihil commodi quis quisquam iusto aliquam, ipsum excepturi libero ipsam quasi, expedita unde fugit?</p>
+    </div>
+`
+}
 
 
 window.onload = function(){
