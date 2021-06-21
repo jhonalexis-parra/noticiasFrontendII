@@ -1,6 +1,7 @@
 $color-principal: #541DF1;
 $color-secundario: #6267E4;
 
+/*root*/
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;;
@@ -8,6 +9,13 @@ $color-secundario: #6267E4;
     padding: 0;
 }
 
+/*body*/
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/*header*/
 header {
     background-color: $color-principal;
     color: #FFFFFF;
@@ -27,10 +35,97 @@ header {
 
             }
         }
-    };
+    }
 }
 
+/*main*/
+main {
+    /* Alto del main: alto viewport - alto Header - alto Footer 
+       Me aseguro que el main ocupa todo el alto disponible */
+    min-height: calc(100vh - 76px - 22px); 
+    display: flex;
+    align-items: center;
+
+       
+       div.container{
+        padding: 1rem;
+        
+        .containersIndividuales{
+            background-size: contain;
+            gap: 5%;
+            display: flex;
+        }
+        
+        h2{
+            
+        }
+
+        div {
+            border-radius: 20px;
+            border-top-left-radius: 0px;
+            padding: 1em;
+        }
+
+        div.nacionales{
+                div.noticiasNacionales{
+                background-image: url("../assets/avocado-vector-free-seamless-pattern1.png");
+                
+                @extend .containersIndividuales;
+                
+            }
+        }
+        
+        div.internacionales{
+
+            div.noticiasInternacionales{
+                background-image: url("../assets/vegan-food-vector-seamless-pattern1.png");
+                @extend .containersIndividuales;
+                
+            }
+
+        }
+
+        .noticia {
+            background-color: rgba($color: #c2b1f3, $alpha: 0.85);
+            border-top-left-radius: 25px;
+            display: grid;
+            gap: 4%; 
+            grid-template-areas: 
+            'area2 area1'
+            'area2 area3'
+            'area2 area4';
+
+            .fecha{
+                font-weight: 300;
+                font-size: 0.8rem;
+                font-style: italic;
+                grid-area: area1;
+            }
+
+            img {
+                max-width: 10rem;
+                grid-area: area2;
+            }
+
+            h3 {
+                text-transform: uppercase;
+                grid-area: area3;
+            }
+
+            p {
+                font-weight: 400;
+                grid-area: area4;
+            }
+
+
+        }
+    }
+}
+
+/*footer*/
 footer {
+    justify-self: flex-end;
+
     div {
         background-color: $color-principal;
         color: #FFFFFF;
